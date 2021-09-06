@@ -1,24 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RandomGameGen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8YB-4X-2Dm">
+                                <rect key="frame" x="-1" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ho-7k-YLM">
+                                <rect key="frame" x="64" y="393" width="285" height="188"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Game Generator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzK-Xg-CN4">
+                                <rect key="frame" x="114.5" y="148" width="185" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dein Spiel ist..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbN-wJ-fnF">
+                                <rect key="frame" x="142" y="300" width="128.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYT-kq-HYb">
+                                <rect key="frame" x="206" y="646" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rva-zf-rX8">
+                                <rect key="frame" x="167.5" y="708" width="79" height="36"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Shuffel">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="Layer.CornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shufflebuttonaction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WEZ-Q8-9ZH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfG-5z-cTW">
+                                <rect key="frame" x="206" y="814" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nzK-Xg-CN4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="2Os-J6-Pht"/>
+                            <constraint firstItem="8YB-4X-2Dm" firstAttribute="centerX" secondItem="HfG-5z-cTW" secondAttribute="centerX" id="4TC-Zw-Kmp"/>
+                            <constraint firstItem="rva-zf-rX8" firstAttribute="top" secondItem="cYT-kq-HYb" secondAttribute="bottom" constant="62" id="4vy-MQ-bEq"/>
+                            <constraint firstItem="HfG-5z-cTW" firstAttribute="top" secondItem="rva-zf-rX8" secondAttribute="bottom" constant="70" id="6lg-40-g1o"/>
+                            <constraint firstItem="9ho-7k-YLM" firstAttribute="top" secondItem="jbN-wJ-fnF" secondAttribute="bottom" constant="69" id="Are-9l-bw7"/>
+                            <constraint firstItem="8YB-4X-2Dm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-21" id="CCr-RQ-BKb"/>
+                            <constraint firstItem="8YB-4X-2Dm" firstAttribute="centerX" secondItem="9ho-7k-YLM" secondAttribute="centerX" id="L5x-Io-kcT"/>
+                            <constraint firstItem="8YB-4X-2Dm" firstAttribute="centerX" secondItem="jbN-wJ-fnF" secondAttribute="centerX" id="Lpg-Ia-Qko"/>
+                            <constraint firstItem="9ho-7k-YLM" firstAttribute="top" secondItem="jbN-wJ-fnF" secondAttribute="bottom" constant="69" id="PCS-YP-f1y"/>
+                            <constraint firstItem="8YB-4X-2Dm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PnI-bm-L6s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8YB-4X-2Dm" secondAttribute="trailing" id="Q7T-Hk-9ox"/>
+                            <constraint firstAttribute="bottom" secondItem="8YB-4X-2Dm" secondAttribute="bottom" id="RgU-Ig-5sh"/>
+                            <constraint firstItem="8YB-4X-2Dm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TpP-Wv-psp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8YB-4X-2Dm" secondAttribute="trailing" constant="1" id="cSq-c8-tVk"/>
+                            <constraint firstItem="rva-zf-rX8" firstAttribute="top" secondItem="9ho-7k-YLM" secondAttribute="bottom" constant="127" id="caK-l7-6b0"/>
+                            <constraint firstItem="8YB-4X-2Dm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dAv-3b-u5g"/>
+                            <constraint firstItem="8YB-4X-2Dm" firstAttribute="centerX" secondItem="cYT-kq-HYb" secondAttribute="centerX" id="jZt-SM-ave"/>
+                            <constraint firstAttribute="bottom" secondItem="HfG-5z-cTW" secondAttribute="bottom" constant="82" id="jjy-vm-WLg"/>
+                            <constraint firstItem="jbN-wJ-fnF" firstAttribute="top" secondItem="nzK-Xg-CN4" secondAttribute="bottom" constant="122" id="qbx-yk-bVF"/>
+                            <constraint firstItem="8YB-4X-2Dm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="qt7-tQ-fOq"/>
+                            <constraint firstItem="jbN-wJ-fnF" firstAttribute="top" secondItem="nzK-Xg-CN4" secondAttribute="bottom" constant="122" id="zRk-4G-bKf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gamelabel" destination="cYT-kq-HYb" id="wR9-Wq-5l6"/>
+                        <outlet property="imageview" destination="9ho-7k-YLM" id="6Eb-x0-Ybj"/>
+                        <outlet property="shufflebutton" destination="rva-zf-rX8" id="dww-lr-CPs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-59.420289855072468" y="-48.214285714285715"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1242" height="2208"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
