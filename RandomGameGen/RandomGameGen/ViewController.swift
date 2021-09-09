@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         z+=1
         imageview.image = images.randomElement()
         versuch.text = "noch "+String(3-z)+" versuche übrig"
+        
     
         let currentimage = imageview.image
         switch currentimage {
@@ -52,6 +53,55 @@ class ViewController: UIViewController {
         default:
             gamelabel.text = ""
         }
+    }
+    
+    func showalert(message: String) {
+        let alert = UIAlertController(title: "game over", message: message, preferredStyle: .alert)
+        
+        let action1 = UIAlertAction(title: "ok", style: .default, handler: {(action) in })
+        let action2 = UIAlertAction(title: "erneut versuchen", style: .default, handler: {(action) in })
+        
+        
+        alert.addAction(action1)
+        alert.addAction(action2)
+        
+        self.present(alert, animated: true,completion: nil)
+        
+    }
+        
+    func resetView(){
+     z = 0
+        
+        
+    }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
 }
