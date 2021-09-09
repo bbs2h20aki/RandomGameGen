@@ -25,8 +25,6 @@ class ViewController: UIViewController {
     @IBAction func shufflebuttonaction(_ sender: UIButton) {
         z+=1
         imageview.image = images.randomElement()
-        versuch.text = "noch "+String(3-z)+" versuche übrig"
-        
     
         let currentimage = imageview.image
         switch currentimage {
@@ -53,6 +51,7 @@ class ViewController: UIViewController {
         default:
             gamelabel.text = ""
         }
+        versuche(zahl: z)
     }
     
     func showalert(message: String) {
@@ -68,10 +67,31 @@ class ViewController: UIViewController {
         self.present(alert, animated: true,completion: nil)
         
     }
+    
+    
+    func versuche(zahl: Int){
+        switch z {
+        case 1:
+            versuch.text = "noch 2 versuche übrig"
+        case 2:
+            versuch.text = "noch 1 versuche übrig"
+        case 3:
+            versuch.text = "keine versuche übrig"
+            shufflebutton.isEnabled = false
+            shufflebutton.alpha = 0.5
+            
+        default:
+            versuch.text = "du noob"
+        }
+    }
         
     func resetView(){
      z = 0
-        
+        versuch.text = "noch 3 versuche"
+        gamelabel.text = ""
+        shufflebutton.alpha = 1
+        shufflebutton.isEnabled = true
+        imageview.image = #imageLiteral(resourceName: "default-image")
         
     }
         
